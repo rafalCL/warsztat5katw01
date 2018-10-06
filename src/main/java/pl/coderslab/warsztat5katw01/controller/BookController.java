@@ -40,4 +40,9 @@ public class BookController {
         this.bookService.deleteById(id);
         return "{\"status\":\"success\"}";
     }
+
+    @GetMapping("/{id}")
+    public Book getBookById(@PathVariable int id){
+        return this.bookService.getById(id);
+    }
 }
